@@ -54,3 +54,9 @@ p.info {
     font-family: Roboto, RobotoDraft, Helvetica, Arial, sans-serif;
     font-size: 16px;
 }
+
+/* ----- FOOTER ----- */
+footer div.mdl-logo img {
+    height: 1.2em;
+    vertical-align: text-top;
+}
