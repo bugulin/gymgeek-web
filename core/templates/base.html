@@ -39,7 +39,16 @@
         <div class="mdl-layout__drawer">
             <span class="mdl-layout-title">Menu</span>
             <nav class="mdl-navigation">
-                <a class="mdl-navigation__link" href="{% url 'home' %}">Hlavní stánka</a>
+                <a class="mdl-navigation__link" href="{% url 'home' %}">Hlavní stránka</a>
+            </nav>
+
+            <div class="mdl-vertical-space"></div>
+
+            <span class="mdl-layout-title">Odkazy</span>
+            <nav class="mdl-navigation">
+                <a class="mdl-navigation__link" href="https://docs.google.com/spreadsheets/d/1Dp6EB788l5_dWj31hXhlfQlkYgpFffe3ls54mOFcKbU/edit?usp=sharing" target="_blank"><img src="{% static 'images/icons/icon_1_spreadsheet_x16.png' %}" alt="google spreadsheet" /> Hlavní tabulka</a>
+                <a class="mdl-navigation__link" href="https://goo.gl/forms/q4ONMKYO01SDnVN83" target="_blank"><img src="{% static 'images/icons/icon_2_form_x16.png' %}" alt="google form" /> Dotazník na organizaci</a>
+                <a class="mdl-navigation__link" href="http://pyladies.cz/brno/" target="_blank"><img src="{% static 'images/icons/pyladies.ico' %}" alt="pyladies" /> Tutoriály od Pyladies</a>
             </nav>
         </div>
 

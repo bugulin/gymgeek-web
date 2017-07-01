@@ -6,6 +6,10 @@ body {
     padding: 0;
 }
 
+.mdl-vertical-space {
+    height: 36px;
+}
+
 /* ----- HEADER ----- */
 
 .mdl-layout__header .mdl-navigation button {
@@ -26,9 +30,22 @@ img.avatar {
 
 /* ----- LAYOUT DRAWER ----- */
 .mdl-layout__drawer {
-    width: 256px;
-    -webkit-transform: translateX(-256px);
-    transform: translateX(-256px);
+    width: 384px;
+    -webkit-transform: translateX(-384px);
+    transform: translateX(-384px);
+}
+
+.mdl-layout__drawer .mdl-navigation {
+    padding-top: 0;
+}
+
+.mdl-navigation__link img {
+    width: 16px;
+    height: 16px;
+
+    margin-right: 8px;
+    vertical-align: text-bottom;
+    border-radius: 2px;
 }
 
 /* ----- PAGE CONTENT ----- */
