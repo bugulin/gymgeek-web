@@ -5,6 +5,9 @@ from django.contrib import admin
 
 
 urlpatterns = [
+    # Django apps
+    url(r'^', include('core.urls')),
+
     # Authentication
     url(r'^oauth/', include('social_django.urls', namespace='social')),
     url(r'^logout/$', auth_views.LogoutView.as_view(), name='logout'),

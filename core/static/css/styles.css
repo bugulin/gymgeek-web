@@ -1,0 +1,56 @@
+body {
+    background-color: #EEEEEE;
+}
+
+.no-padding {
+    padding: 0;
+}
+
+/* ----- HEADER ----- */
+
+.mdl-layout__header .mdl-navigation button {
+    width: 40px;
+    height: 40px;
+}
+
+.mdl-layout__header .mdl-navigation button:hover {
+    background-color: inherit;
+}
+
+img.avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    padding: 4px;
+}
+
+/* ----- LAYOUT DRAWER ----- */
+.mdl-layout__drawer {
+    width: 256px;
+    -webkit-transform: translateX(-256px);
+    transform: translateX(-256px);
+}
+
+/* ----- PAGE CONTENT ----- */
+
+.page-content {
+    padding: 16px 16px 64px 16px;
+}
+
+section {
+    padding: 16px 0;
+}
+
+section.mdl-section {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+p.info {
+    text-align: center;
+    color: rgb(158, 158, 158);
+    line-height: 36px;
+
+    font-family: Roboto, RobotoDraft, Helvetica, Arial, sans-serif;
+    font-size: 16px;
+}

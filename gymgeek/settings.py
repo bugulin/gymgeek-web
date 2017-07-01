@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    'core.apps.CoreConfig',
 ]
 
 MIDDLEWARE = [
@@ -112,6 +114,9 @@ SOCIAL_AUTH_PIPELINE = (
 SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = os.environ['GOOGLE_CLIENT_ID']
 SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = os.environ['GOOGLE_CLIENT_SECRET']
 
+LOGOUT_REDIRECT_URL = 'home'
+LOGIN_URL = 'home'
+LOGIN_REDIRECT_URL = 'home'
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.11/topics/i18n/
