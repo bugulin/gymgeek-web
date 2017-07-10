@@ -72,6 +72,23 @@ p.info {
     font-size: 16px;
 }
 
+.mdl-card {
+    min-height: inherit;
+}
+
+.mdl-card h2.mdl-card__title-text.bold {
+    display: inline-block;
+    line-height: 40px;
+
+    font-weight: 500;
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.87);
+}
+
+.mdl-card h2.mdl-card__title-text.bold img {
+    margin-right: 4px;
+}
+
 /* ----- FOOTER ----- */
 footer div.mdl-logo img {
     height: 1.2em;

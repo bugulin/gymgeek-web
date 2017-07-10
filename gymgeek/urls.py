@@ -7,6 +7,7 @@ from django.contrib import admin
 urlpatterns = [
     # Django apps
     url(r'^', include('core.urls')),
+    url(r'^accounts/', include('accounts.urls')),
 
     # Authentication
     url(r'^oauth/', include('social_django.urls', namespace='social')),

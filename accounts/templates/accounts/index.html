@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <section class="mdl-section">
+        {% for account in accounts %}
+        <div class="mdl-card mdl-shadow--2dp">
+            <div class="mdl-card__title">
+                <h2 class="mdl-card__title-text bold"><img src="{{ account.avatar }}" alt="{{ account.username }}_avatar" class="avatar">{{ account.get_full_name }}</h2>
+            </div>
+        </div>
+        {% endfor %}
+    </section>
+{% endblock %}
