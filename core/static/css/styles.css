@@ -73,6 +73,7 @@ p.info {
 }
 
 .mdl-card {
+    display: inline-block;
     min-height: inherit;
 }
 
