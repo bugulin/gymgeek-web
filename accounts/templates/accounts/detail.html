@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <section class="mdl-section">
+        <div class="mdl-card mdl-shadow--2dp covered">
+            <div class="mdl-card__title">
+                <h2 class="mdl-card__title-text bold"><img src="{{ account.avatar }}" alt="{{ account.username }}_avatar" class="avatar">{{ account.get_full_name }}</h2>
+            </div>
+            <div class="mdl-card__supporting-text no-top-padding">
+                <table class="mdl-table covered">
+                    <tbody>
+                        <tr>
+                            <th>Jméno:</th>
+                            <td>{{ account.first_name }}</td>
+                        </tr>
+                        <tr>
+                            <th>Příjmení:</th>
+                            <td>{{ account.last_name }}</td>
+                        </tr>
+                        <tr>
+                            <th>Gmail:</th>
+                            <td>{{ account.email }}</td>
+                        </tr>
+                        <tr>
+                            <th>Účet Google+:</th>
+                            <td><a href="{{ account.url }}" target="_blank">{{ account.url }}</a></td>
+                        </tr>
+                        <tr>
+                            <th>Profilový obrázek:</th>
+                            <td><a href="{{ account.avatar }}" target="_blank" class="long-text">{{ account.avatar }}</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+{% endblock %}

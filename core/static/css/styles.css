@@ -5,6 +5,18 @@ body {
 .no-padding {
     padding: 0;
 }
+.no-top-padding {
+    padding-top: 0;
+}
+
+.covered {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.long-text {
+    word-break: break-all;
+}
 
 .mdl-vertical-space {
     height: 36px;
@@ -77,6 +89,16 @@ p.info {
     min-height: inherit;
 }
 
+a .mdl-card {
+    transition-duration: .28s;
+    transition-timing-function: cubic-bezier(.4,0,.2,1);
+    transition-property: background-color;
+}
+
+a:hover .mdl-card {
+    background-color: rgba(255, 255, 255, .56);
+}
+
 .mdl-card h2.mdl-card__title-text.bold {
     display: inline-block;
     line-height: 40px;
@@ -87,7 +109,24 @@ p.info {
 }
 
 .mdl-card h2.mdl-card__title-text.bold img {
-    margin-right: 4px;
+    margin-right: 8px;
+}
+
+.mdl-card__supporting-text {
+    width: auto;
+}
+
+.mdl-table {
+    text-align: left;
+}
+
+.mdl-table td, .mdl-table th {
+    padding: 4px 8px;
+    vertical-align: top;
+}
+
+.mdl-table th:first-child {
+    width: 128px;
 }
 
 /* ----- FOOTER ----- */

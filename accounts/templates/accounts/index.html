@@ -3,11 +3,11 @@
 {% block content %}
     <section class="mdl-section">
         {% for account in accounts %}
-        <div class="mdl-card mdl-shadow--2dp">
+        <a href="{% url 'accounts:detail' account.username %}"><div class="mdl-card mdl-shadow--2dp">
             <div class="mdl-card__title">
                 <h2 class="mdl-card__title-text bold"><img src="{{ account.avatar }}" alt="{{ account.username }}_avatar" class="avatar">{{ account.get_full_name }}</h2>
             </div>
-        </div>
+        </div></a>
         {% endfor %}
     </section>
 {% endblock %}

@@ -6,5 +6,5 @@ app_name = 'accounts'
 
 urlpatterns = [
     url(r'^$', views.index, name='index'),
-    #url(r'^profile/$', views.profile, name='profile'),
+    url(r'^(?P<username>.+)/$', views.detail, name='detail')
 ]

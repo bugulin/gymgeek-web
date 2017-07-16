@@ -28,7 +28,7 @@
                     {% if user.is_authenticated %}
                     <button id="user-menu" class="mdl-button mdl-js-button mdl-button--icon"><img src="{{ user.avatar }}" alt="avatar" class="avatar"></button>
                     <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="user-menu">
-                        <a href="{#% url 'users:profile' %}" class="mdl-menu__item"><li>Můj účet</li></a>
+                        <a href="{% url 'accounts:detail' user.username %}" class="mdl-menu__item"><li>Můj účet</li></a>
                         <li disabled class="mdl-menu__item">Odpojit se od GymGeeku</li>
                         <a href="{% url 'logout' %}" class="mdl-menu__item"><li>Odhlásit se</li></a>
                     </ul>
