@@ -92,6 +92,12 @@ SECURE_HSTS_INCLUDE_SUBDOMAINS = True
 SECURE_HSTS_PRELOAD = True
 
 
+# Logs
+from django.utils.log import DEFAULT_LOGGING
+
+DEFAULT_LOGGING['handlers']['console']['filters'] = []
+
+
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 
