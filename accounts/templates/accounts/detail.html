@@ -29,9 +29,18 @@
                             <th>Profilový obrázek:</th>
                             <td><a href="{{ account.avatar }}" target="_blank" class="long-text">{{ account.avatar }}</a></td>
                         </tr>
+                        <tr>
+                            <th>Popis:</th>
+                            <td>{% if account.about %}{{ account.about }}{% else %}<em>neznámý</em>{% endif %}</td>
+                        </tr>
                     </tbody>
                 </table>
             </div>
+            {% if can_edit %}
+            <div class="mdl-card__actions mdl-card--border">
+                <a href="{% url 'accounts:edit' account.username %}" class="mdl-button mdl-js-button mdl-button--primary">Upravit informace</a>
+            </div>
+            {% endif %}
         </div>
     </section>
 {% endblock %}

@@ -7,6 +7,6 @@ class Account(AbstractUser):
     last_name = models.CharField(_('last name'), max_length=30)
     email = models.EmailField(_('email address'))
 
-    avatar = models.CharField(_('profile image'), max_length=150)
-    url = models.CharField(_('google+ page'), max_length=50)
+    avatar = models.CharField(_('profile image'), max_length=250)
+    url = models.CharField(_('google+ page'), max_length=75)
     about = models.TextField(_('description'), max_length=500, blank=True)
