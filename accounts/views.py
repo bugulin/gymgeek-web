@@ -1,4 +1,5 @@
-from django.http import Http404
+from django.contrib import messages
+from django.http import Http404, HttpResponseRedirect
 from django.shortcuts import get_object_or_404, render
 from django.urls import reverse
 
@@ -23,8 +24,27 @@ def edit(request, username):
     account = get_object_or_404(Account, username=username)
 
     if can_edit_account(request.user, account):
-        form = AboutForm(request.POST)
-        # Dodělat zpracování formuláře
+        if request.method == 'POST':
+            form = AboutForm(request.POST)
+
+            if form.is_valid():
+                updated = False
+
+                new_about = form.cleaned_data['about']
+                if new_about != account.about:
+                    updated = True
+
+                if updated:
+                    account.about = new_about
+                    account.save()
+
+                    messages.success(request, 'Účet aktualizován.')
+                    return HttpResponseRedirect(reverse('accounts:detail', args=(account.username,)))
+                else:
+                    messages.error(request, 'Nic k aktualizaci.')
+        else:
+            form = AboutForm(initial={'about': account.about})
+
         return render(request, 'accounts/edit.html', context={'title': 'Upravit informace', 'parent_page': reverse('accounts:detail', args=(account.username,)), 'account': account, 'form': form})
     else:
         raise Http404

@@ -129,6 +129,13 @@ a:hover .mdl-card {
     width: 128px;
 }
 
+/* --- FORM --- */
+table .mdl-js-textfield {
+    display: block;
+    width: auto;
+    margin: -20px 0;
+}
+
 /* ----- FOOTER ----- */
 footer div.mdl-logo img {
     height: 1.2em;

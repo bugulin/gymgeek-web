@@ -19,5 +19,5 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
 
     # Special static files
-    url(r'^favicon\.ico$', RedirectView.as_view(url=settings.STATIC_URL + 'images/favicon.ico')),
+    url(r'^favicon\.ico$', RedirectView.as_view(url=settings.STATIC_URL + 'images/favicon.ico', permanent=True)),
 ]
