@@ -5,11 +5,9 @@
 </div>
 
 <script>
-var i = 0;
-
 r(function(){
     var snackbarContainer = document.querySelector("#toast-message");
-
+    var i = 0;
     var data = [
     {% for message in messages %}   ["{{ message.tags }}", "{{ message }}"],
     {% endfor %}];
@@ -24,12 +22,16 @@ r(function(){
     }
 
     changeToast(i++);
-    var interval = setInterval(function() {
-        changeToast(i++);
-        if (i == data.length) {
-            clearInterval(interval);
-        }
-    }, 3000);
+
+    if (data.length > i) {
+        var interval = setInterval(function() {
+            if (i == data.length) {
+                clearInterval(interval);
+            }
+
+            changeToast(i++);
+        }, 3000);
+    }
 });
 function r(f){ /in/.test(document.readyState)?setTimeout("r("+f+")",9):f()}
 </script>

@@ -84,6 +84,8 @@ p.info {
     font-size: 16px;
 }
 
+
+/* --- MDL-CARD --- */
 .mdl-card {
     display: inline-block;
     min-height: inherit;
@@ -116,6 +118,7 @@ a:hover .mdl-card {
     width: auto;
 }
 
+/* --- TABLE --- */
 .mdl-table {
     text-align: left;
 }
@@ -134,6 +137,28 @@ table .mdl-js-textfield {
     display: block;
     width: auto;
     margin: -20px 0;
+}
+
+/* ----- TOAST MESSAGES ----- */
+#toast-message {
+    border-width: 0 0 5px 0;
+    border-style: solid;
+}
+
+#toast-message.debug {
+    border-color: #FFEB3B;
+}
+#toast-message.info {
+    border-color: #607D8B;
+}
+#toast-message.success {
+    border-color: #4CAF50;
+}
+#toast-message.warning {
+    border-color: #FF9800;
+}
+#toast-message.error {
+    border-color: #F44336;
 }
 
 /* ----- FOOTER ----- */
