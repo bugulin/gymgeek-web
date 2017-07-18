@@ -89,6 +89,7 @@ p.info {
 .mdl-card {
     display: inline-block;
     min-height: inherit;
+    margin: 0 8px 8px 0;
 }
 
 a .mdl-card {
@@ -129,11 +130,11 @@ a:hover .mdl-card {
 }
 
 .mdl-table th:first-child {
-    width: 128px;
+    width: 144px;
 }
 
 /* --- FORM --- */
-table .mdl-js-textfield {
+form table .mdl-js-textfield {
     display: block;
     width: auto;
     margin: -20px 0;

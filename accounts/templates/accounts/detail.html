@@ -7,7 +7,7 @@
                 <h2 class="mdl-card__title-text bold"><img src="{{ account.avatar }}" alt="{{ account.username }}_avatar" class="avatar">{{ account.get_full_name }}</h2>
             </div>
             <div class="mdl-card__supporting-text no-top-padding">
-                <table class="mdl-table covered">
+                <table class="mdl-table">
                     <tbody>
                         <tr>
                             <th>Jméno:</th>
@@ -41,6 +41,26 @@
                 <a href="{% url 'accounts:edit' account.username %}" class="mdl-button mdl-js-button mdl-button--primary">Upravit informace</a>
             </div>
             {% endif %}
+        </div>
+
+        <div class="mdl-card mdl-shadow--2dp covered">
+            <div class="mdl-card__title">
+                <h2 class="mdl-card__title-text">Statistiky</h2>
+            </div>
+            <div class="mdl-card__supporting-text no-top-padding">
+                <table class="mdl-table">
+                    <tbody>
+                        <tr>
+                            <th>Registrace:</th>
+                            <td>{{ account.date_joined }}</td>
+                        </tr>
+                        <tr>
+                            <th>Poslední přihlášení:</th>
+                            <td>{% if account.last_login %}{{ account.last_login }}{% else %}<em>nikdy</em>{% endif %}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
     </section>
 {% endblock %}
