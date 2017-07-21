@@ -55,6 +55,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 
     'social_django.middleware.SocialAuthExceptionMiddleware',
+    'core.decorators.LoginRequiredMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 

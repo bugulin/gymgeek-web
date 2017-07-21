@@ -1,5 +1,6 @@
 from django.conf import settings
 from django.conf.urls import include, url
+from django.contrib.staticfiles.templatetags.staticfiles import static
 from django.views.generic.base import RedirectView
 
 from django.contrib.auth import views as auth_views
@@ -19,5 +20,5 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
 
     # Special static files
-    url(r'^favicon\.ico$', RedirectView.as_view(url=settings.STATIC_URL + 'images/favicon.ico', permanent=True)),
+    url(r'^favicon\.ico$', RedirectView.as_view(url=static('images/favicon.ico'), permanent=True)),
 ]

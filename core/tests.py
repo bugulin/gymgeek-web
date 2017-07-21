@@ -31,3 +31,26 @@ class CoreTestCase(TestCase):
         self.client.login(username='user', password='password')
         response = self.client.get('/health')
         self.assertEqual(response.status_code, 200)
+
+    def test_login_required_middleware(self):
+        """Testování 'LoginRequiredMiddleware' ve složce 'decorators.py' pro dostupnosti stránek bez a s přihlášením."""
+        # Bez přihlášení
+        response = self.client.get(reverse('social:begin', args=('google-oauth2',)))
+        self.assertEqual(response.status_code, 302)
+
+        response = self.client.get('/favicon.ico')
+        self.assertIn(response.status_code, {200, 301})
+
+        response = self.client.get(reverse('accounts:index'))
+        self.assertEqual(response.status_code, 404)
+
+        # S přihlášením
+        self.client.login(username='user', password='password')
+        response = self.client.get(reverse('social:begin', args=('google-oauth2',)))
+        self.assertEqual(response.status_code, 404)
+
+        response = self.client.get('/favicon.ico')
+        self.assertIn(response.status_code, {200, 301})
+
+        response = self.client.get(reverse('accounts:index'))
+        self.assertEqual(response.status_code, 200)
