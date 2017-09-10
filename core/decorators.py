@@ -18,6 +18,7 @@ URLS_1 =  (
 # Uživatel nesmí být přihlášen
 URLS_2 = (
     r'^oauth/',
+    r'^accounts/authorization/',
 )
 
 URLS1 = [compile(expr) for expr in (URLS_1 + URLS_2)]

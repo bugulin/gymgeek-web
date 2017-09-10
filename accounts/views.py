@@ -1,6 +1,6 @@
 from django.contrib import messages
 from django.http import Http404, HttpResponseRedirect
-from django.shortcuts import get_object_or_404, render
+from django.shortcuts import get_object_or_404, render, redirect
 from django.urls import reverse
 
 from .models import Account
@@ -9,6 +9,13 @@ from .forms import AboutForm
 def can_edit_account(user, account):
     return user.has_perm('accounts.edit') or user == account
 
+# Authorization of new account
+def authorization(request):
+    if request.method == 'POST':
+        request.session['auth_key'] = request.POST.get('auth_key')
+        return redirect('social:complete', backend='google-oauth2')
+
+    return render(request, 'accounts/authorization.html')
 
 # All accounts
 def index(request):
