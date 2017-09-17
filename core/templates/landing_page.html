@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {% include 'snippets/head.html' %}
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'css/landing.css' %}">
+    </head>
+
+    <body>
+        <div class="mdl-layout mdl-js-layout" style="background-image: url({% static 'images/wallpaper.png' %})">
+            <main class="mdl-layout__content">
+                <div class="page-content">
+                    {% block content %}<h1>Někdo zapomněl dodat obsah.</h1>{% endblock %}
+                </div>
+
+                <footer class="mdl-mini-footer">
+                    <div class="mdl-mini-footer__left-section">
+                        <div class="mdl-logo"><img src="{% static 'images/gymgeek-web.png' %}" alt="gymgeek-web logo" /></div>
+                    </div>
+                </footer>
+            </main>
+        </div>
+    </body>
+</html>

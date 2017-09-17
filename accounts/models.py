@@ -6,6 +6,9 @@ class AuthKey(models.Model):
     code = models.CharField(_('secret code'), max_length=32, unique=True)
     group = models.ForeignKey(Group, on_delete=models.CASCADE)
 
+    def __str__(self):
+        return '{} {}'.format(_('Group'), self.group.name)
+
 
 class Account(AbstractUser):
     is_active = models.BooleanField(_('active'), default=False)

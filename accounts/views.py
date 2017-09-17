@@ -15,7 +15,7 @@ def authorization(request):
         request.session['auth_key'] = request.POST.get('auth_key')
         return redirect('social:complete', backend='google-oauth2')
 
-    return render(request, 'accounts/authorization.html')
+    return render(request, 'accounts/authorization.html', context={'title': 'Autorizace'})
 
 # All accounts
 def index(request):
