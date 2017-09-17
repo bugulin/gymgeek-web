@@ -1,11 +1,11 @@
-{% extends 'landing_page.html' %}
+{% extends 'templates/landing_page.html' %}
 
 {% block content %}
     <h1>Požadována autorizace!</h1>
     <form action="{% url 'accounts:authorization' %}" method="post">
       {% csrf_token %}
       <div class="mdl-textfield mdl-js-textfield">
-          <input name="auth_key" class="mdl-textfield__input" id="auth_key" type="text" autocomplate="off">
+          <input name="auth_key" class="mdl-textfield__input" id="auth_key" type="text" autocomplete="off">
           <label class="mdl-textfield__label" for="auth_key"><em>Zadej autorizační klíč</em></label>
       </div>
       <input type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" value="OK">

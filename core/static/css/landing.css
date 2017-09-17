@@ -15,6 +15,10 @@
     background-color: rgba(238, 238, 238, .56);
 }
 
+h1.big {
+    font-size: 128px;
+}
+
 /* --- FORM --- */
 form .mdl-textfield {
     margin-right: 8px;
