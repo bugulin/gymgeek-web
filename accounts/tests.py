@@ -6,8 +6,8 @@ from .models import Account
 
 class AccountTestCase(TestCase):
     def setUp(self):
-        Account.objects.create_user('user1', 'user1@gymgeek.cz', 'U1')
-        Account.objects.create_user('user2', 'user2@gymgeek.cz', 'U2')
+        Account.objects.create_user('user1', 'user1@gymgeek.cz', 'U1', is_active=True)
+        Account.objects.create_user('user2', 'user2@gymgeek.cz', 'U2', is_active=True)
 
         self.client = Client()
         self.client.login(username='user1', password='U1')

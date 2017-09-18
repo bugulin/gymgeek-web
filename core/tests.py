@@ -6,7 +6,8 @@ from accounts.models import Account
 
 class CoreTestCase(TestCase):
     def setUp(self):
-        Account.objects.create_user('user', 'user@gymgeek.cz', 'password')
+        Account.is_active = True
+        Account.objects.create_user('user', 'user@gymgeek.cz', 'password', is_active=True)
         self.client = Client()
 
     def test_home_page(self):
