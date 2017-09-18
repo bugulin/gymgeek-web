@@ -2,13 +2,14 @@
 verify_ssl = true
 url = "https://pypi.python.org/simple"
 
-[dev-packages]
-
 [packages]
 
 django = "==1.11.2"
 gunicorn = "*"
+psycopg2 = "==2.7.1"
 dj-database-url = "==0.4.2"
 whitenoise = "==3.3.0"
 social-auth-app-django = "==1.2.0"
 
+
+[dev-packages]
