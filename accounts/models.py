@@ -16,3 +16,8 @@ class Account(AbstractUser):
     avatar = models.CharField(_('profile image'), max_length=250, blank=True)
     url = models.CharField(_('google+ page'), max_length=75, blank=True)
     about = models.TextField(_('description'), max_length=500, blank=True)
+
+    class Meta:
+        permissions = (
+            ('staff', 'Has access to the admin site'),
+        )
