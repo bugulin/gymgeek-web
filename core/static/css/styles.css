@@ -14,6 +14,13 @@ body {
     box-sizing: border-box;
 }
 
+.mdl-container {
+    display: block;
+    width: auto;
+    max-width: 820px;
+    margin: 0 auto;
+}
+
 .long-text {
     word-break: break-all;
 }
@@ -61,7 +68,6 @@ img.avatar {
 }
 
 /* ----- PAGE CONTENT ----- */
-
 .page-content {
     padding: 16px 32px 64px 32px;
 }
@@ -125,6 +131,32 @@ a:hover .mdl-card {
 
 .mdl-card__supporting-text {
     width: auto;
+}
+
+.mdl-card__document {
+    padding: 64px;
+}
+
+.mdl-card__document h1 {
+    font-size: 34px;
+    line-height: 40px;
+    margin: 0 0 8px 0;
+}
+
+.mdl-card__document h2 {
+    font-size: 24px;
+    line-height: 32px;
+    margin: 32px 0 8px;
+}
+
+.mdl-card__document h3 {
+    font-size: 20px;
+    line-height: 28px;
+    margin: 24px 0 8px;
+}
+
+.mdl-card__document p {
+    margin: 4px 0 12px;
 }
 
 /* --- TABLE --- */

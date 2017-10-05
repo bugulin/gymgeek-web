@@ -2,18 +2,16 @@
 {% load extras %}
 
 {% block content %}
-    <section class="mdl-section">
-        {% for post in posts %}
+    {% for post in posts %}
+    <section class="mdl-container">
         <div class="covered mdl-card mdl-shadow--2dp">
-            <div class="mdl-card__title">
+            <div class="mdl-card__document">
                 <h1>{{ post.title }}</h1>
-            </div>
-            <div class="mdl-card__supporting-text">
                 {{ post.text|markdown }}
             </div>
         </div>
-        {% endfor %}
     </section>
+    {% endfor %}
 
     <p class='info'>Došli jste na konec.</p>
 {% endblock %}
