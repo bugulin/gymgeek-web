@@ -17,54 +17,90 @@
 
     <style>
         body {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-
-            background: white url("{% static 'images/wallpaper.png' %}") no-repeat center / cover;
+            background: white url("{% static 'images/wallpaper.png' %}") repeat scroll   center/cover;
         }
 
         .page-content {
             padding: 24px;
         }
 
-        .main-card {
-            width: 512px;
-            max-width: 100%;
+        article {
+            max-width: 820px;
             margin: 0 auto;
         }
 
-        .main-card > .mdl-card__title {
-            height: 176px;
-            background: url("{% static 'images/gymgeek-academy.png' %}") no-repeat left 40%;
-            background-size: 80% auto;
-            padding-bottom: 0;
+        .mdl-card__document {
+            padding: 64px;
         }
 
-        @media screen and (min-width: 560px) and (min-height: 445px) {
-            .main-card {
+        .mdl-card__document h1 {
+            font-size: 34px;
+            line-height: 40px;
+            margin: 0 0 8px 0;
+        }
+
+        .mdl-card__document h2 {
+            font-size: 24px;
+            line-height: 32px;
+            margin: 32px 0 8px;
+        }
+
+        .mdl-card__document h3 {
+            font-size: 20px;
+            line-height: 28px;
+            margin: 24px 0 8px;
+        }
+
+        .mdl-card__document p {
+            margin: 4px 0 12px;
+        }
+
+        footer {
+            background-color: rgba(255, 255, 255, .87);
+            padding: 8px 10px;
+            margin-top: 32px;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        @media screen and (min-width: 820px) and (min-height: 820px) {
+            body {
                 position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -67%);
+                width: 100%;
+                height: 100%;
+            }
+
+            footer {
+                position: absolute;
+                bottom: 12px;
             }
         }
     </style>
 </head>
 <body>
     <div class="page-content">
-        <div class="main-card mdl-card mdl-shadow--2dp">
-            <div class="mdl-card__title">
-                <h2 class="mdl-card__title-text">Vítej na našich stránkách!</h2>
+        <article>
+            <div class="mdl-card mdl-shadow--2dp" style="width: 100%;">
+                <div class="mdl-card__document">
+                    <h1>GymGeek 2017/2018</h1>
+                    <p>Ahoj! GymGeek i tento školní rok bude pořádat kroužek na roudnickém gymnázium. Letos se budeme stejně jako loni učit programovat, tvořit weby a hrát si :). Kódit budeme hlavně v <a href="https://www.python.org/">Pythonu 3</a>.</p>
+                    <h2>Jak to bude probíhat?</h2>
+                    <p>Letos máme trošku jiný sytém. V neděli večer uveřejníme materiály k lekci, aby si je mohl doma každý prohlédnout a zjistit, co budeme dělat a pokusil se na to přijít sám. Poté se sejdeme na lekci, kde to probereme společně a vysvětlíme si, co nám není jasné. Lekci budeme mít minimálně v pátek po vyučování, případně kdykoli jindy před vyučováním.</p>
+                    <h2>Kdo smí přijít?</h2>
+                    <p>Každý, kdo se chce naučit programovat, i když nechodí na gympl, ale na základku.</p>
+                    <h2>Kdy se sejdeme?</h2>
+                    <p>První lekce bude v pátek 13. října. Další lekce budou poté naplánovány.</p>
+                    <h2>Máme se někde zapsat?</h2>
+                    <p>Ne nemusíte, stačí přijít na první lekci.</p>
+                </div>
             </div>
-            <div class="mdl-card__supporting-text">
-                Tento web je určen pouze pro členy organizace GymGeek::Academy. Pro pokračování se musíš přihlásit (přes Google účet).
-            </div>
-            <div class="mdl-card__actions mdl-card--border">
-                <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="{% url 'social:begin' 'google-oauth2' %}">Přihlásit se</a>
-            </div>
-        </div>
+        </article>
+
+        <footer>
+            <p>Tyto stránky využívají <a href="https://getmdl.io/" target="_blank">Material Design Lite</a>.<span style="opacity: 0.05;"> Pro přihlášení na stránky (pouze pro členy) klikněte <a href="{% url 'social:begin' 'google-oauth2' %}">zde</a>.</span></p>
+        </footer>
     </div>
 </body>
 </html>
