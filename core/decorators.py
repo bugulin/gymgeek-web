@@ -12,7 +12,7 @@ URLS_1 =  (
     r'^favicon.ico$',
     r'^{}$'.format(static('images/favicon.ico').lstrip('/')),
     r'^{}$'.format(static('images/wallpaper.png').lstrip('/')),
-    r'^{}$'.format(static('images/gymgeek-academy.png').lstrip('/')),
+    #r'^{}$'.format(static('images/gymgeek-academy.png').lstrip('/')),
     r'^{}$'.format(static('images/gymgeek-web.png').lstrip('/')),
 
     r'^{}$'.format(static('css/landing.css').lstrip('/')),
