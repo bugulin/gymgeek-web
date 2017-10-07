@@ -1,1 +1,1 @@
-web: gunicorn gymgeek.wsgi --log-file gunicorn.log
+web: gunicorn gymgeek.wsgi

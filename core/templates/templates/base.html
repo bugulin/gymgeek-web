@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html>
     <head>
-        {% include 'snippets/head.html' %}
         {% load static %}
-        <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+        {% include 'snippets/head.html' %}
     </head>
 
     <body>
@@ -53,6 +52,7 @@
                         <div class="mdl-logo"><img src="{% static 'images/gymgeek-web.png' %}" alt="gymgeek-web logo" /></div>
                         <ul class="mdl-mini-footer__link-list">
                             <li><a href="{% url 'accounts:index' %}">Seznam gymgeeků</a></li>
+                            {% if user.is_staff %}<li><a href="{% url 'admin:index' %}">Správa systému</a></li>{% endif %}
                         </ul>
                     </div>
                 </footer>

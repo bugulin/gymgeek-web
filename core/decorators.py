@@ -15,7 +15,7 @@ URLS_1 =  (
     #r'^{}$'.format(static('images/gymgeek-academy.png').lstrip('/')),
     r'^{}$'.format(static('images/gymgeek-web.png').lstrip('/')),
 
-    r'^{}$'.format(static('css/landing.css').lstrip('/')),
+    r'^{}$'.format(static('css/styles.css').lstrip('/')),
 )
 
 # Uživatel nesmí být přihlášen

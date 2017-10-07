@@ -1,6 +1,6 @@
 {% extends 'templates/landing_page.html' %}
 
 {% block content %}
-    <h1 class="big">404</h1>
-    <p>Požadovaná adresa '{{ request.path }}' nebyla na tomto serveru nalezena.</p>
+    <h1>Chyba 404</h1>
+    <p>Omlouváme se, ale požadovaná stránka na adrese <a href="{{ request.path }}">{{ request.path }}</a> nebyla nalezena.</p>
 {% endblock %}
