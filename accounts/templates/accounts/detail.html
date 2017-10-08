@@ -5,6 +5,7 @@
         <div class="mdl-card mdl-shadow--2dp covered">
             <div class="mdl-card__title">
                 <h2 class="mdl-card__title-text bold"><img src="{{ account.avatar }}" alt="{{ account.username }}_avatar" class="avatar">{{ account.get_full_name }}</h2>
+                {% for group in groups %}<span class="mdl-chip"><span class="mdl-chip__text">{{ group }}</span></span>{% endfor %}
             </div>
             <div class="mdl-card__supporting-text no-top-padding">
                 <table class="mdl-table">

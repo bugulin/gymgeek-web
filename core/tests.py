@@ -22,17 +22,6 @@ class CoreTestCase(TestCase):
         response = self.client.get('/')
         self.assertEqual(response.templates[0].name, 'core/home.html')
 
-    def test_health_page(self):
-        """Na adrese '/health' je veřejně přístupná stránka."""
-        # Anonymní uživatel
-        response = self.client.get('/health')
-        self.assertEqual(response.status_code, 200)
-
-        # Registrovaný uživatel
-        self.client.login(username='user', password='password')
-        response = self.client.get('/health')
-        self.assertEqual(response.status_code, 200)
-
     def test_login_required_middleware(self):
         """Testování 'LoginRequiredMiddleware' ve složce 'decorators.py' pro dostupnosti stránek bez a s přihlášením."""
         # Bez přihlášení

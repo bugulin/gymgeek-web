@@ -7,7 +7,6 @@ from re import compile
 # Uživatel nemusí být přihlášen
 URLS_1 =  (
     r'^$',
-    r'^health$',
 
     r'^favicon.ico$',
     r'^{}$'.format(static('images/favicon.ico').lstrip('/')),

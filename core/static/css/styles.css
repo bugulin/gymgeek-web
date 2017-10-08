@@ -68,7 +68,7 @@ img.avatar {
 
 /* ----- PAGE CONTENT ----- */
 .page-content {
-    padding: 16px 32px;
+    padding: 16px;
 }
 
 section {
@@ -89,7 +89,6 @@ p.info {
     font-size: 16px;
 }
 
-
 /* --- MDL-CARD --- */
 .mdl-card {
     display: inline-block;
@@ -109,6 +108,15 @@ a:hover .mdl-card {
 
 .mdl-card .mdl-card__title h1 {
     margin: 0;
+}
+
+.mdl-card .mdl-card__title .mdl-chip {
+    vertical-align: middle;
+    margin: 2px 4px;
+}
+
+.mdl-card .mdl-card__title .mdl-chip:first-of-type {
+    margin-left: 16px;
 }
 
 .mdl-card .mdl-card__supporting-text h2:first-child {
@@ -133,7 +141,7 @@ a:hover .mdl-card {
 }
 
 .mdl-card__document {
-    padding: 32px;
+    padding: 24px;
 }
 
 .mdl-card__document h1 {
@@ -224,29 +232,39 @@ body.landing {
     background-size: cover;
 }
 
-body.landing .page-content {
-    margin-bottom: 100px;
-}
-
-body.landing footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    box-sizing: border-box;
-}
-
 body.landing footer p {
     margin: 0;
     line-height: 36px;
 }
 
-/* ----- BIG SCREEN ----- */
+/* ----- SCREENS ----- */
+@media screen and (max-width: 420px) {
+    .mdl-layout__drawer {
+        width: 90%;
+        -webkit-transform: translateX(-100%);
+        transform: translateX(-100%);
+    }
+}
+
 @media screen and (min-width: 760px) {
-    .page-content {
+    body.landing .page-content {
         padding-top: 32px;
     }
 
     .mdl-card__document {
         padding: 64px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    body.landing .page-content {
+        margin-bottom: 100px;
+    }
+
+    body.landing footer {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        box-sizing: border-box;
     }
 }

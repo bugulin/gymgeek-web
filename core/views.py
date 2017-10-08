@@ -10,7 +10,3 @@ def home(request):
         return render(request, 'core/home.html', context={'title': 'Hlavní stránka', 'posts': posts})
 
     return render(request, 'core/login.html')
-
-# Health page for Openshift
-def health(request):
-    return HttpResponse('1')

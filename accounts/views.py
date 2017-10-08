@@ -24,7 +24,8 @@ def index(request):
 # Account detail
 def detail(request, username):
     account = get_object_or_404(Account, username=username)
-    return render(request, 'accounts/detail.html', context={'title': 'Uživatel %s' % account.username, 'account': account, 'can_edit': can_edit_account(request.user, account)})
+    groups = [group.name for group in account.groups.all()]
+    return render(request, 'accounts/detail.html', context={'title': 'Uživatel %s' % account.username, 'account': account, 'groups': groups, 'can_edit': can_edit_account(request.user, account)})
 
 # Account editing
 def edit(request, username):
