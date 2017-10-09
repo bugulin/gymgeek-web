@@ -19,7 +19,7 @@ def authorization(request):
 
 # All accounts
 def index(request):
-    return render(request, 'accounts/index.html', context={'title': 'Uživatelé', 'accounts': Account.objects.order_by('last_name', 'first_name')})
+    return render(request, 'accounts/index.html', context={'title': 'Seznam uživatelů', 'accounts': Account.objects.order_by('last_name', 'first_name')})
 
 # Account detail
 def detail(request, username):

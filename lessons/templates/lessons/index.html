@@ -1,0 +1,17 @@
+{% extends 'templates/base.html' %}
+
+{% block content %}
+    <section class="mdl-container">
+        {% for lesson in lessons %}
+        <a href="{#% url 'accounts:detail' account.username %}">
+            <div class="mdl-card list mdl-shadow--2dp covered">
+            <div class="mdl-card__title">
+                <h2 class="mdl-card__title-text"><span class="index">{{ lesson.index }}.</span> {{ lesson.title }}</h2>
+                <p class="mdl-card__title-text">{{ lesson.date }}</p>
+            </div>
+        </div></a>
+        {% endfor %}
+    </section>
+
+    <p class='info'>To jsou všechny hodiny.</p>
+{% endblock %}

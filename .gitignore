@@ -91,3 +91,4 @@ ENV/
 # Django
 db.sqlite3
 staticfiles/
+media/

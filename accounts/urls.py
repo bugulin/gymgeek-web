@@ -3,7 +3,6 @@ from django.conf.urls import url
 from . import views
 
 app_name = 'accounts'
-
 urlpatterns = [
     # Authentication
     url(r'^authorization/$', views.authorization, name='authorization'),

@@ -11,6 +11,7 @@ urlpatterns = [
     # Django apps
     url(r'^', include('core.urls')),
     url(r'^accounts/', include('accounts.urls')),
+    url(r'^lessons/', include('lessons.urls')),
 
     # Authentication
     url(r'^oauth/', include('social_django.urls', namespace='social')),
