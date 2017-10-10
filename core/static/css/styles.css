@@ -110,7 +110,7 @@ a:hover .mdl-card {
     background-color: rgba(255, 255, 255, .56);
 }
 
-.mdl-card .mdl-card__title {
+.mdl-card .mdl-card__title.detail {
     justify-content: space-between;
 }
 

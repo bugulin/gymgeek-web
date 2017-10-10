@@ -1,0 +1,15 @@
+{% extends 'templates/minor_page.html' %}
+{% load extras %}
+
+{% block content %}
+    <section class="mdl-section">
+        <div class="covered mdl-card mdl-shadow--2dp">
+            <div class="mdl-card__document">
+                <h1>{{ lesson.title }}</h1>
+                {{ text|markdown }}
+            </div>
+        </div>
+    </section>
+
+    <p class='info'>To jsou všechny hodiny.</p>
+{% endblock %}

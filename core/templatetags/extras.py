@@ -9,4 +9,4 @@ register = template.Library()
 @register.filter(name='markdown')
 @stringfilter
 def markdown_to_html5(text):
-    return mark_safe(markdown(conditional_escape(text), output_format='html5').replace('<a ', '<a target=\'_blank\''))
+    return mark_safe(markdown(conditional_escape(text), output_format='html5', extensions=['markdown.extensions.fenced_code']).replace('<a ', '<a target=\'_blank\''))
