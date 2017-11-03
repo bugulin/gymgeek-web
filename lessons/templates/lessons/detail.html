@@ -6,10 +6,8 @@
         <div class="covered mdl-card mdl-shadow--2dp">
             <div class="mdl-card__document">
                 <h1>{{ lesson.title }}</h1>
-                {{ text|markdown }}
+                {{ text|rst }}
             </div>
         </div>
     </section>
-
-    <p class='info'>To jsou všechny hodiny.</p>
 {% endblock %}

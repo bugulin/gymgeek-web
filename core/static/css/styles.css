@@ -243,6 +243,25 @@ footer div.mdl-logo img {
     vertical-align: text-top;
 }
 
+/* ----- CODE BLOCKS ----- */
+pre {
+    font-size: 12px;
+    background-color: #FAFAFA;
+    color: #404040;
+
+    padding: 12px 12px;
+    margin: 1px 0 24px 0;
+    border: 1px solid #e1e4e5;
+    overflow-x: auto;
+}
+
+pre span.builtin { color: #900090; }
+pre span.comment.single { color: #DD0000; }
+pre span.function { color: #0000FF; }
+pre span.keyword { color: #FF7700; }
+pre span.operator.word { color: #FF7700; }
+pre span.string { color: #00AA00; }
+
 /* ----- LANDING PAGE ----- */
 body.landing {
     background-color: white;

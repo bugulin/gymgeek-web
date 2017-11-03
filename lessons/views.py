@@ -10,4 +10,4 @@ def index(request):
 def detail(request, index):
     lesson = get_object_or_404(Lesson, index=index)
     text = lesson.text.read()
-    return render(request, 'lessons/detail.html', context={'title': 'Lekce {}'.format(lesson.index), 'parent_page': reverse('lessons:index'), 'lesson': lesson, 'text': text})
+    return render(request, 'lessons/detail.html', context={'title': 'Lekce č. {}'.format(lesson.index), 'parent_page': reverse('lessons:index'), 'lesson': lesson, 'text': text})
