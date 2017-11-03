@@ -1,0 +1,13 @@
+{% extends 'templates/minor_page.html' %}
+{% load extras %}
+
+{% block content %}
+    <section class="mdl-section">
+        <div class="covered mdl-card mdl-shadow--2dp">
+            <div class="mdl-card__document">
+                <h1>{{ lesson.title }}</h1>
+                {{ text|rst }}
+            </div>
+        </div>
+    </section>
+{% endblock %}

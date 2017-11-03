@@ -1,12 +1,11 @@
 from django import template
 from django.template.defaultfilters import stringfilter
-from django.utils.html import conditional_escape
 from django.utils.safestring import mark_safe
-from markdown import markdown
+from docutils.core import publish_parts
 
 register = template.Library()
 
-@register.filter(name='markdown')
+@register.filter(name='rst')
 @stringfilter
-def markdown_to_html5(text):
-    return mark_safe(markdown(conditional_escape(text), output_format='html5').replace('<a ', '<a target=\'_blank\''))
+def rst_to_html5(text):
+    return mark_safe(publish_parts(text, writer_name="html5", settings_overrides={'initial_header_level': 2})['body'])

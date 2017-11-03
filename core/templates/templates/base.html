@@ -30,6 +30,7 @@
                 <span class="mdl-layout-title">Menu</span>
                 <nav class="mdl-navigation">
                     <a class="mdl-navigation__link" href="{% url 'home' %}">Hlavní stránka</a>
+                    <a class="mdl-navigation__link" href="{% url 'lessons:index' %}">Lekce</a>
                 </nav>
 
                 <div class="mdl-vertical-space"></div>
@@ -51,7 +52,7 @@
                     <div class="mdl-mini-footer__left-section">
                         <div class="mdl-logo"><img src="{% static 'images/gymgeek-web.png' %}" alt="gymgeek-web logo" /></div>
                         <ul class="mdl-mini-footer__link-list">
-                            <li><a href="{% url 'accounts:index' %}">Seznam gymgeeků</a></li>
+                            <li><a href="{% url 'accounts:index' %}">GymGeeci</a></li>
                             {% if user.is_staff %}<li><a href="{% url 'admin:index' %}">Správa systému</a></li>{% endif %}
                         </ul>
                     </div>

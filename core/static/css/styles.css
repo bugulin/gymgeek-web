@@ -96,6 +96,10 @@ p.info {
     margin: 0 8px 8px 0;
 }
 
+.mdl-card.list {
+    margin: 0;
+}
+
 a .mdl-card {
     transition-duration: .28s;
     transition-timing-function: cubic-bezier(.4,0,.2,1);
@@ -104,6 +108,10 @@ a .mdl-card {
 
 a:hover .mdl-card {
     background-color: rgba(255, 255, 255, .56);
+}
+
+.mdl-card .mdl-card__title.detail {
+    justify-content: space-between;
 }
 
 .mdl-card .mdl-card__title h1 {
@@ -117,6 +125,18 @@ a:hover .mdl-card {
 
 .mdl-card .mdl-card__title .mdl-chip:first-of-type {
     margin-left: 16px;
+}
+
+.mdl-card .mdl-card__title-text span.index {
+    width: 32px;
+    text-align: right;
+    padding-right: 6px;
+}
+
+.mdl-card p.mdl-card__title-text {
+    color: rgba(0, 0, 0, .56);
+    font-size: .8em;
+    line-height: 28px;
 }
 
 .mdl-card .mdl-card__supporting-text h2:first-child {
@@ -222,6 +242,25 @@ footer div.mdl-logo img {
     height: 1.2em;
     vertical-align: text-top;
 }
+
+/* ----- CODE BLOCKS ----- */
+pre {
+    font-size: 12px;
+    background-color: #FAFAFA;
+    color: #404040;
+
+    padding: 12px 12px;
+    margin: 1px 0 24px 0;
+    border: 1px solid #e1e4e5;
+    overflow-x: auto;
+}
+
+pre span.builtin { color: #900090; }
+pre span.comment.single { color: #DD0000; }
+pre span.function { color: #0000FF; }
+pre span.keyword { color: #FF7700; }
+pre span.operator.word { color: #FF7700; }
+pre span.string { color: #00AA00; }
 
 /* ----- LANDING PAGE ----- */
 body.landing {
