@@ -186,6 +186,37 @@ a:hover .mdl-card {
     margin: 4px 0 12px;
 }
 
+.mdl-card__document ul {
+    padding-left: 24px;
+}
+
+.mdl-card__document li p {
+    margin: 0;
+}
+
+.mdl-card__document div.note {
+    margin: 4px 12px 12px 12px;
+    padding: 8px 16px;
+    background-color: rgba(255, 215, 64, .2);
+    border-left: 5px solid rgba(255, 215, 64, .6);
+}
+
+.mdl-card__document div.note p {
+    margin: 4px 0 6px;
+    line-height: 1.5em;
+}
+
+.mdl-card__document div.note p.admonition-title {
+    display: none;
+}
+
+.mdl-card__document div.note p:nth-child(2) {
+    margin-top: 0;
+}
+.mdl-card__document div.note p:last-child {
+    margin-bottom: 0;
+}
+
 /* --- TABLE --- */
 .mdl-table {
     text-align: left;

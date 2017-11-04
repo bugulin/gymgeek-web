@@ -1,0 +1,10 @@
+{% load static %}
+<footer class="mdl-mini-footer">
+    <div class="mdl-mini-footer__left-section">
+        <div class="mdl-logo"><img src="{% static 'images/gymgeek-web.png' %}" alt="gymgeek-web logo" /></div>
+        <ul class="mdl-mini-footer__link-list">
+            <li><a href="{% url 'accounts:index' %}">GymGeeci</a></li>
+            {% if user.is_staff %}<li><a href="{% url 'admin:index' %}">Správa systému</a></li>{% endif %}
+        </ul>
+    </div>
+</footer>

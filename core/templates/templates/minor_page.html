@@ -34,14 +34,7 @@
                     {% block content %}<h1>Empty Page.</h1>{% endblock %}
                 </div>
 
-                <footer class="mdl-mini-footer">
-                    <div class="mdl-mini-footer__left-section">
-                        <div class="mdl-logo"><img src="{% static 'images/gymgeek-web.png' %}" alt="gymgeek-web logo" /></div>
-                        <ul class="mdl-mini-footer__link-list">
-                            <li><a href="{% url 'accounts:index' %}">Seznam gymgeeků</a></li>
-                        </ul>
-                    </div>
-                </footer>
+                {% include 'snippets/footer.html' %}
             </main>
 
             {% include 'snippets/toast_message.html' %}

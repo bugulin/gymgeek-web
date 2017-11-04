@@ -1,6 +1,7 @@
 {% extends 'templates/base.html' %}
 
 {% block content %}
+    {% if lessons %}
     <section class="mdl-container">
         {% for lesson in lessons %}
         <a href="{% url 'lessons:detail' lesson.index %}">
@@ -14,5 +15,10 @@
         {% endfor %}
     </section>
 
-    <p class='info'>To jsou všechny hodiny.</p>
+    <p class="info">To jsou všechny hodiny.</p>
+    {% else %}
+    <section class="mdl-container">
+        <p class="info">Zatím zde nic není.</p>
+    </section>
+    {% endif %}
 {% endblock %}
