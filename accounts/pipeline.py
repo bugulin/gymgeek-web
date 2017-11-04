@@ -15,7 +15,7 @@ def authorize(strategy, user, **kwargs):
             if auth_key == key.code:
                 user.groups.add(key.group)
                 user.is_active = True
-                if user.has_perm('accounts.staff'): user.is_staff = True
+                if user.has_perm('accounts.staff_access'): user.is_staff = True
                 user.save()
                 break
         return

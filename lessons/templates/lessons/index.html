@@ -5,7 +5,7 @@
     <section class="mdl-container">
         {% for lesson in lessons %}
         <a href="{% url 'lessons:detail' lesson.index %}">
-            <div class="mdl-card list mdl-shadow--2dp covered">
+            <div class="mdl-card list mdl-shadow--2dp covered"{% if not lesson.is_visible %} style="opacity: .54;"{% endif %}>
                 <div class="mdl-card__title detail">
                     <h2 class="mdl-card__title-text"><span class="index">{{ lesson.index }}.</span> {{ lesson.title }}</h2>
                     <p class="mdl-card__title-text">{{ lesson.date }}</p>

@@ -19,5 +19,5 @@ class Account(AbstractUser):
 
     class Meta:
         permissions = (
-            ('staff', 'Has access to the admin site'),
+            ('staff_access', 'Has access to the admin site'),
         )

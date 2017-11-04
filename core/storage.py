@@ -12,4 +12,4 @@ class OverwriteStorage(FileSystemStorage):
 
         if self.exists(name):
             os.remove(os.path.join(settings.MEDIA_ROOT, name))
-            return name
+        return name

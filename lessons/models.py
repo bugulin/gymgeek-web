@@ -4,7 +4,7 @@ from datetime import date
 from core.storage import OverwriteStorage
 
 def lesson_content_path(instance, filename):
-    return 'lessons/{}.rst'.format(instance.index)
+    return 'lessons/{:02d}.rst'.format(instance.index)
 
 
 class Lesson(models.Model):
@@ -14,6 +14,11 @@ class Lesson(models.Model):
     text = models.FileField(_('content of the lesson'), storage=OverwriteStorage(), upload_to=lesson_content_path)
 
     is_visible = models.BooleanField(_('visible'), default=False)
+
+    class Meta:
+        permissions = (
+            ('see_hidden_lesson', 'Can see hidden lesson'),
+        )
 
     def __str__(self):
         return '{}. {}'.format(self.index, self.title)

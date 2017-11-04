@@ -14,6 +14,6 @@ class Migration(migrations.Migration):
     operations = [
         migrations.AlterModelOptions(
             name='account',
-            options={'permissions': (('staff', 'Has access to the admin site'),)},
+            options={'permissions': (('staff_access', 'Has access to the admin site'),)},
         ),
     ]
