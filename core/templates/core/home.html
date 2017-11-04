@@ -2,6 +2,7 @@
 {% load extras %}
 
 {% block content %}
+    {% if posts %}
     {% for post in posts %}
     <section class="mdl-container">
         <div class="covered mdl-card mdl-shadow--2dp">
@@ -14,4 +15,9 @@
     {% endfor %}
 
     <p class='info'>Došli jste na konec.</p>
+    {% else %}
+    <section class="mdl-container">
+        <p class="info">Nic k vidění.</p>
+    </section>
+    {% endif %}
 {% endblock %}
