@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'whitenoise.runserver_nostatic',
     'django.contrib.staticfiles',
+    'gdstorage',
 
     'core.apps.CoreConfig',
     'lessons.apps.LessonsConfig',
@@ -166,3 +167,4 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+GOOGLE_DRIVE_STORAGE_JSON_KEY_FILE = os.getenv('STORAGE_KEY_FILE')
