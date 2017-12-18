@@ -27,6 +27,6 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='lesson',
             name='text',
-            field=models.FileField(storage=core.storage.OverwriteStorage(), upload_to=lessons.models.lesson_content_path, verbose_name='content of the lesson'),
+            field=models.FileField(storage=core.storage.Storage(), upload_to=lessons.models.lesson_content_path, verbose_name='content of the lesson'),
         ),
     ]
